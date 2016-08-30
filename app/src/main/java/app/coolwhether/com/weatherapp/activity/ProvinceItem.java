@@ -6,6 +6,15 @@ package app.coolwhether.com.weatherapp.activity;
 public class ProvinceItem {
     private String pro_name;
     private int pro_res_id;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getPro_name() {
         return pro_name;

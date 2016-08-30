@@ -74,6 +74,11 @@ public class ItemAdapter extends BaseAdapter {
             ProvinceItem item = new ProvinceItem();
             item.setPro_name(proList.get(i));
             item.setPro_res_id(R.drawable.city);
+            if (i == 0) {
+               item.setId("CN101010100");
+            }else {
+                item.setId("0000000000");
+            }
             itemList.add(item);
         }
     }
