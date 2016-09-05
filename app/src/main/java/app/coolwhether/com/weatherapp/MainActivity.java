@@ -1,5 +1,6 @@
 package app.coolwhether.com.weatherapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import app.coolwhether.com.weatherapp.activity.CityActivity;
 import app.coolwhether.com.weatherapp.activity.ProvinceItem;
 import app.coolwhether.com.weatherapp.adapter.ItemAdapter;
 import butterknife.BindView;
@@ -25,11 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
         ItemAdapter adapter = new ItemAdapter(this);
         lv.setAdapter(adapter);
+        lv.setClickable(true);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pro_id = ((ProvinceItem) parent.getItemAtPosition(position)).getId();
-                Log.e(TAG, "onItemClick: pro_id---"+pro_id );
+                //Log.e(TAG, "onItemClick: pro_id---"+pro_id );
+                if (pro_id.equals("CN101010100")){
+                    Intent intent = new Intent(MainActivity.this, CityActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
