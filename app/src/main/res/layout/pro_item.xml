@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:background="@drawable/rectangle"
+<!--listitem 布局文件最外层必须使用FrameLayout才能显示margin,如果要添加背景框的话-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_margin="10dp"
               android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/pro_item_iv"
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginBottom="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="40dp"
-        android:layout_height="40dp"/>
+        android:layout_marginRight="8dp"
+        android:background="@drawable/rectangle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/pro_item_tv"
-        android:layout_marginBottom="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_gravity="center"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        <ImageView
+            android:id="@+id/pro_item_iv"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/pro_item_tv"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</FrameLayout>

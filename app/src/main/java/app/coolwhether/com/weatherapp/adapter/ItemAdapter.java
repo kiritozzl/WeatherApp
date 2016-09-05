@@ -30,41 +30,41 @@ public class ItemAdapter extends BaseAdapter {
     }
 
     private void initString(){
-
         proList.add(mContext.getResources().getString(R.string.beijing));
+        proList.add(mContext.getResources().getString(R.string.shanghai));
         proList.add(mContext.getResources().getString(R.string.tianjing));
+        proList.add(mContext.getResources().getString(R.string.chongqin));
+
+        proList.add(mContext.getResources().getString(R.string.heilongjiang));
+        proList.add(mContext.getResources().getString(R.string.jilin));
+        proList.add(mContext.getResources().getString(R.string.liaoning));
+        proList.add(mContext.getResources().getString(R.string.neimeng));
         proList.add(mContext.getResources().getString(R.string.hebei));
         proList.add(mContext.getResources().getString(R.string.shanxi));
-        proList.add(mContext.getResources().getString(R.string.neimeng));
-        proList.add(mContext.getResources().getString(R.string.liaoning));
-        proList.add(mContext.getResources().getString(R.string.jilin));
-        proList.add(mContext.getResources().getString(R.string.heilongjiang));
-        proList.add(mContext.getResources().getString(R.string.shanghai));
+        proList.add(mContext.getResources().getString(R.string.shanxis));
+        proList.add(mContext.getResources().getString(R.string.shangdong));
+        proList.add(mContext.getResources().getString(R.string.xinjiang));
+        proList.add(mContext.getResources().getString(R.string.xizhang));
+        proList.add(mContext.getResources().getString(R.string.qinhai));
+        proList.add(mContext.getResources().getString(R.string.gansu));
+        proList.add(mContext.getResources().getString(R.string.ninxia));
+        proList.add(mContext.getResources().getString(R.string.henan));
         proList.add(mContext.getResources().getString(R.string.jiangsu));
+        proList.add(mContext.getResources().getString(R.string.hubei));
         proList.add(mContext.getResources().getString(R.string.zhejiang));
         proList.add(mContext.getResources().getString(R.string.anhui));
         proList.add(mContext.getResources().getString(R.string.fujian));
         proList.add(mContext.getResources().getString(R.string.jiangxi));
-        proList.add(mContext.getResources().getString(R.string.shangdong));
-        proList.add(mContext.getResources().getString(R.string.henan));
-        proList.add(mContext.getResources().getString(R.string.hubei));
         proList.add(mContext.getResources().getString(R.string.hunan));
-        proList.add(mContext.getResources().getString(R.string.guangdong));
-        proList.add(mContext.getResources().getString(R.string.hainan));
-        proList.add(mContext.getResources().getString(R.string.guangxi));
-        proList.add(mContext.getResources().getString(R.string.gansu));
-        proList.add(mContext.getResources().getString(R.string.shanxis));
-        proList.add(mContext.getResources().getString(R.string.xinjiang));
-        proList.add(mContext.getResources().getString(R.string.qinhai));
-        proList.add(mContext.getResources().getString(R.string.ninxia));
-        proList.add(mContext.getResources().getString(R.string.chongqin));
-        proList.add(mContext.getResources().getString(R.string.sichuang));
         proList.add(mContext.getResources().getString(R.string.guizhou));
+        proList.add(mContext.getResources().getString(R.string.sichuang));
+        proList.add(mContext.getResources().getString(R.string.guangdong));
         proList.add(mContext.getResources().getString(R.string.yunnan));
-        proList.add(mContext.getResources().getString(R.string.xizhang));
-        proList.add(mContext.getResources().getString(R.string.taiwang));
-        proList.add(mContext.getResources().getString(R.string.aomeng));
+        proList.add(mContext.getResources().getString(R.string.guangxi));
+        proList.add(mContext.getResources().getString(R.string.hainan));
         proList.add(mContext.getResources().getString(R.string.xianggan));
+        proList.add(mContext.getResources().getString(R.string.aomeng));
+        proList.add(mContext.getResources().getString(R.string.taiwang));
         initData();
     }
 
@@ -74,11 +74,14 @@ public class ItemAdapter extends BaseAdapter {
             ProvinceItem item = new ProvinceItem();
             item.setPro_name(proList.get(i));
             item.setPro_res_id(R.drawable.city);
-            if (i == 0) {
-               item.setId("CN101010100");
-            }else {
-                item.setId("0000000000");
+            String id = "";
+            if (i <= 3){
+                id = "CN10" + String.valueOf(1010100 + i * 10000);
             }
+            else {
+                id = "CN10" + String.valueOf(1010101 + i * 10000);
+            }
+            item.setId(id);
             itemList.add(item);
         }
     }

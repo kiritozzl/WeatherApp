@@ -33,10 +33,12 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pro_id = ((ProvinceItem) parent.getItemAtPosition(position)).getId();
                 //Log.e(TAG, "onItemClick: pro_id---"+pro_id );
-                if (pro_id.equals("CN101010100")){
-                    Intent intent = new Intent(MainActivity.this, CityActivity.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(MainActivity.this, CityActivity.class);
+                String pro_name = ((ProvinceItem) parent.getItemAtPosition(position)).getPro_name();
+                intent.putExtra("name",pro_name);
+                intent.putExtra("pro_id",pro_id);
+                startActivity(intent);
+
             }
         });
     }

@@ -3,6 +3,7 @@ package app.coolwhether.com.weatherapp.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,9 +17,10 @@ import butterknife.ButterKnife;
 /**
  * Created by kirito on 2016/9/1.
  */
-public class CityActivity extends Activity {
+public class CityActivity extends AppCompatActivity {
     @BindView(R.id.city_lv)
     ListView lv;
+    private String pro_id;
     private static final String TAG = "CityActivity";
 
     @Override
@@ -27,6 +29,8 @@ public class CityActivity extends Activity {
         setContentView(R.layout.city_list);
         ButterKnife.bind(this);
 
+        setTitle(getIntent().getStringExtra("name"));
+        pro_id = getIntent().getStringExtra("pro_id");
         CityItemAdapter adapter = new CityItemAdapter(this);
         lv.setClickable(true);
         lv.setAdapter(adapter);

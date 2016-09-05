@@ -23,14 +23,14 @@ public class LoadTask extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String s) {
-        //Log.e(TAG, "onPostExecute: s---"+s);
+        Log.e(TAG, "onPostExecute: s---"+s);
         try{
             item = JsonHelper.parseJsonToItem(s);
             //如果callBack不为空，把item参数传给WeatherShow.activity
             if (callBack != null){
                 callBack.setItem(item);
             }
-            Log.e(TAG, "onPostExecute: item---"+item );
+            //Log.e(TAG, "onPostExecute: item---"+item );
         }catch (Exception e){
             e.printStackTrace();
         }

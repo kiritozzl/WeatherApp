@@ -11,6 +11,8 @@
     <ListView
         android:id="@+id/main_lv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:divider="@null"
         />
+    <!--去掉listview分割线：android:divider="@null"-->
 </LinearLayout>
