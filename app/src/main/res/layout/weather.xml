@@ -1,167 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_margin="8dp"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/time_tv"
-        android:text="日期："
-        android:layout_margin="5dp"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/time_tv_show"
-        android:layout_toRightOf="@id/time_tv"
-        android:text="12"
-        android:layout_margin="5dp"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/wind"
-        android:layout_below="@id/time_tv"
-        android:text="风向及大小："
-        android:textSize="16sp"
-        android:layout_margin="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/time_tv"
+                android:text="日期："
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/wind_sc"
-        android:layout_margin="5dp"
-        android:layout_toRightOf="@id/wind"
-        android:layout_below="@id/time_tv_show"
-        android:text="sc"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/time_tv_show"
+                android:layout_toRightOf="@id/time_tv"
+                android:text="12"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/wind_dir"
-        android:layout_margin="5dp"
-        android:layout_toRightOf="@id/wind_sc"
-        android:layout_below="@id/time_tv_show"
-        android:text="dir"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/wind"
+                android:layout_below="@id/time_tv"
+                android:text="风向及大小："
+                android:textSize="16sp"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/ss"
-        android:layout_margin="5dp"
-        android:layout_below="@id/wind"
-        android:text="日落时间："
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/wind_sc"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/wind"
+                android:layout_below="@id/time_tv_show"
+                android:text="sc"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/ss_show"
-        android:layout_margin="5dp"
-        android:layout_below="@id/wind"
-        android:layout_toRightOf="@id/ss"
-        android:text="ss"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/wind_dir"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/wind_sc"
+                android:layout_below="@id/time_tv_show"
+                android:text="dir"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/sr"
-        android:layout_margin="5dp"
-        android:layout_below="@id/ss"
-        android:text="日出时间："
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/ss"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wind"
+                android:text="日落时间："
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/sr_show"
-        android:layout_margin="5dp"
-        android:layout_below="@id/ss"
-        android:layout_toRightOf="@id/sr"
-        android:text="sr"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/ss_show"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wind"
+                android:layout_toRightOf="@id/ss"
+                android:text="ss"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/temp_min"
-        android:layout_margin="5dp"
-        android:layout_below="@id/sr"
-        android:text="最低温度："
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/sr"
+                android:layout_margin="5dp"
+                android:layout_below="@id/ss"
+                android:text="日出时间："
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/temp_min_show"
-        android:layout_margin="5dp"
-        android:layout_below="@id/sr"
-        android:layout_toRightOf="@id/temp_min"
-        android:text="temp_min"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/sr_show"
+                android:layout_margin="5dp"
+                android:layout_below="@id/ss"
+                android:layout_toRightOf="@id/sr"
+                android:text="sr"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/temp_max"
-        android:layout_margin="5dp"
-        android:layout_below="@id/temp_min"
-        android:text="最高温度："
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/temp_min"
+                android:layout_margin="5dp"
+                android:layout_below="@id/sr"
+                android:text="最低温度："
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/temp_max_show"
-        android:layout_margin="5dp"
-        android:layout_below="@id/temp_min"
-        android:layout_toRightOf="@id/temp_max"
-        android:text="temp_max"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/temp_min_show"
+                android:layout_margin="5dp"
+                android:layout_below="@id/sr"
+                android:layout_toRightOf="@id/temp_min"
+                android:text="temp_min"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/txt_d"
-        android:layout_margin="5dp"
-        android:layout_below="@id/temp_max"
-        android:text="白天天气状况："
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/temp_max"
+                android:layout_margin="5dp"
+                android:layout_below="@id/temp_min"
+                android:text="最高温度："
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/txt_d_show"
-        android:layout_margin="5dp"
-        android:layout_below="@id/temp_max"
-        android:layout_toRightOf="@id/txt_d"
-        android:text="txt_d"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/temp_max_show"
+                android:layout_margin="5dp"
+                android:layout_below="@id/temp_min"
+                android:layout_toRightOf="@id/temp_max"
+                android:text="temp_max"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/txt_n"
-        android:layout_margin="5dp"
-        android:layout_below="@id/txt_d"
-        android:text="晚上天气状况："
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txt_d"
+                android:layout_margin="5dp"
+                android:layout_below="@id/temp_max"
+                android:text="白天天气状况："
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/txt_n_show"
-        android:layout_margin="5dp"
-        android:layout_below="@id/txt_d"
-        android:layout_toRightOf="@id/txt_n"
-        android:text="txt_n"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txt_d_show"
+                android:layout_margin="5dp"
+                android:layout_below="@id/temp_max"
+                android:layout_toRightOf="@id/txt_d"
+                android:text="txt_d"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_n"
+                android:layout_margin="5dp"
+                android:layout_below="@id/txt_d"
+                android:text="晚上天气状况："
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_n_show"
+                android:layout_margin="5dp"
+                android:layout_below="@id/txt_d"
+                android:layout_toRightOf="@id/txt_n"
+                android:text="txt_n"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </RelativeLayout>
