@@ -21,6 +21,7 @@ public class CityActivity extends AppCompatActivity {
     @BindView(R.id.city_lv)
     ListView lv;
     private String pro_id;
+    private String pro_name;
     private static final String TAG = "CityActivity";
 
     @Override
@@ -29,9 +30,10 @@ public class CityActivity extends AppCompatActivity {
         setContentView(R.layout.city_list);
         ButterKnife.bind(this);
 
-        setTitle(getIntent().getStringExtra("name"));
+        pro_name = getIntent().getStringExtra("name");
+        setTitle(pro_name);
         pro_id = getIntent().getStringExtra("pro_id");
-        CityItemAdapter adapter = new CityItemAdapter(this);
+        CityItemAdapter adapter = new CityItemAdapter(this,pro_name,pro_id);
         lv.setClickable(true);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
